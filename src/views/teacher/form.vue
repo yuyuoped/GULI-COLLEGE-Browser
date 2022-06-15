@@ -57,7 +57,6 @@ export default {
   },
   created() {
     const id = this.$route.params.id
-    console.log('test' + id)
     if (id && id.length > 0) {
       this.haveId = true
       this.findTeacherById(id)
@@ -73,7 +72,6 @@ export default {
       })
     },
     handleAvatarSuccess(res, file) {
-      console.log(res)
       if (res.code === 20000) {
         this.$message.success('文件上传成功')
         this.teacher.avatar = res.data.path
