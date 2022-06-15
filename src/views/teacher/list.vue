@@ -50,7 +50,17 @@
       <el-table-column
         prop="name"
         label="姓名"
-        width="180"/>
+        width="100"/>
+      <el-table-column
+        prop="avatar"
+        label="头像"
+        width="150">
+        <template slot-scope="scope">
+          <el-avatar :size="80" :src="scope.row.avatar">
+            <img src="https://guli-college-220212.oss-cn-shanghai.aliyuncs.com/default.jpg">
+          </el-avatar>
+        </template>
+      </el-table-column>
       <el-table-column
         prop="level"
         label="头衔"
